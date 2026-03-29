@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blue Horizon Supermarket</title>
+    <style>
+        body { background-color: #001f3f; color: #7FDBFF; font-family: 'Courier New', monospace; margin: 0; }
+        header { background: #001529; padding: 20px; border-bottom: 3px solid #0074D9; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
+        .item { border: 1px solid #0074D9; padding: 15px; background: #002b55; border-radius: 5px; transition: 0.3s; }
+        .item:hover { background: #004080; border-color: #39CCCC; }
+        .price { color: #2ECC40; font-weight: bold; }
+        /* Hidden Flag Hint: PSNACET{0K_THIS_FLAG_BUT_NO} */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BLUE HORIZON SUPERMARKET v2.0</h1>
+    </header>
+    <div class="grid">
+        <div class="item"><h3>Kitchen Blender</h3><p class="price">₹2,499</p></div>
+        <div class="item"><h3>Ironing Board</h3><p class="price">₹850</p></div>
+        <div class="item"><h3>Cotton Bedspread</h3><p class="price">₹1,200</p></div>
+        <div class="item"><h3>LED Desk Lamp</h3><p class="price">₹550</p></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

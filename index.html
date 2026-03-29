@@ -2,27 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blue Horizon Supermarket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Horizon Supermarket | Premium Home Essentials</title>
     <style>
-        body { background-color: #001f3f; color: #7FDBFF; font-family: 'Courier New', monospace; margin: 0; }
-        header { background: #001529; padding: 20px; border-bottom: 3px solid #0074D9; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
-        .item { border: 1px solid #0074D9; padding: 15px; background: #002b55; border-radius: 5px; transition: 0.3s; }
-        .item:hover { background: #004080; border-color: #39CCCC; }
-        .price { color: #2ECC40; font-weight: bold; }
-        /* Hidden Flag Hint: PSNACET{0K_THIS_FLAG_BUT_NO} */
+        :root {
+            --primary-blue: #001f3f;
+            --accent-blue: #0074D9;
+            --neon-cyan: #7FDBFF;
+            --card-bg: #002b55;
+        }
+
+        body {
+            background-color: var(--primary-blue);
+            color: var(--neon-cyan);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #001529;
+            padding: 40px 20px;
+            border-bottom: 3px solid var(--accent-blue);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        h1 { margin: 0; letter-spacing: 3px; color: white; }
+
+        .container {
+            flex: 1;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: white;
+            cursor: crosshair;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: #2ECC40;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .buy-btn {
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #001529;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* HINT FOR THE PLAYER: PSNACET{0K_THIS_FLAG_BUT_NO} */
+        .hidden-clue { display: none; }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>BLUE HORIZON SUPERMARKET v2.0</h1>
+        <h1>BLUE HORIZON SUPERMARKET</h1>
+        <p>Premium Household Accessories & Smart Solutions</p>
     </header>
-    <div class="grid">
-        <div class="item"><h3>Kitchen Blender</h3><p class="price">₹2,499</p></div>
-        <div class="item"><h3>Ironing Board</h3><p class="price">₹850</p></div>
-        <div class="item"><h3>Cotton Bedspread</h3><p class="price">₹1,200</p></div>
-        <div class="item"><h3>LED Desk Lamp</h3><p class="price">₹550</p></div>
+
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Microfiber Mop Set</h3>
+                <p>360-degree rotation for deep cleaning.</p>
+                <div class="price">₹899</div>
+                <button class="buy-btn" onclick="checkStock('MOP')">Check Stock</button>
+            </div>
+            <div class="product-card">
+                <h3>Ceramic Dinner Set</h3>
+                <p>12-piece luxury set with gold trim.</p>
+                <div class="price">₹2,500</div>
+                <button class="buy-btn" onclick="checkStock('DINNER')">Check Stock</button>
+            </div>
+            <div class="product-card">
+                <h3>Smart LED Desk Lamp</h3>
+                <p>Adjustable brightness with USB port.</p>
+                <div class="price">₹1,200</div>
+                <button class="buy-btn" onclick="checkStock('LAMP')">Check Stock</button>
+            </div>
+            <div class="product-card">
+                <h3>Non-Stick Frying Pan</h3>
+                <p>High-durability granite coating.</p>
+                <div class="price">₹1,450</div>
+                <button class="buy-btn" onclick="checkStock('PAN')">Check Stock</button>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="hidden-clue">
+        DEBUG LOG: /assets/internal/vault/ - Check server-side image metadata for flag verification.
+    </div>
+
+    <footer>
+        &copy; 2026 Blue Horizon Logistics | System Version: 5.0.0-PRO | 
+        <a href="#" style="color:#333; text-decoration: none;" id="admin-link">Admin Access</a>
+    </footer>
+
+    <script>
+        // Obfuscated logic to distract the user
+        function checkStock(item) {
+            console.log("Validating item hash for: " + item);
+            const _0x5a1b = ["\x50\x53\x4e\x41\x43\x45\x54\x7b\x30\x4b\x5f\x54\x48\x49\x53\x5f\x46\x4c\x41\x47\x5f\x42\x55\x54\x5f\x4e\x4f\x7d"];
+            alert("Status: In Stock. Verification Code sent to internal log.");
+        }
+
+        document.getElementById('admin-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log("Unauthorized Access Attempt. Refer to /assets/internal/vault/policy.jpg");
+        });
+    </script>
 </body>
 </html>
